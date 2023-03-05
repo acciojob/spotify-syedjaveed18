@@ -318,7 +318,7 @@ public class SpotifyRepository {
         String artistName = null;
         int likes = 0;
         for(Artist artist : artists){
-            if(artist.getLikes() >= likes){
+            if(artist.getLikes() > likes){
                 likes = artist.getLikes();
                 artistName = artist.getName();
             }
@@ -330,7 +330,7 @@ public class SpotifyRepository {
         String songName = null;
         int likes = 0;
         for(Song song : songs){
-            if(song.getLikes() >= likes){
+            if(song.getLikes() > likes){
                 likes = song.getLikes();
                 songName = song.getTitle();
             }
